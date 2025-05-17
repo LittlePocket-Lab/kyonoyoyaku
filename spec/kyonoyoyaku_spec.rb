@@ -8,4 +8,10 @@ RSpec.describe Kyonoyoyaku do
   it "does something useful" do
     expect(false).to eq(false)
   end
+
+  describe "info" do
+    it "情報を返してくれる" do
+      expect(Kyonoyoyaku::INFO).to include("このGemは今日の予約を管理します。")
+    end
+  end
 end
