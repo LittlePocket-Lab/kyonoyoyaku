@@ -1,0 +1,11 @@
+services:
+  ruby:
+    build:
+      context: .
+    working_dir: /project
+    user: ubuntu
+    ports:
+      - "${NODE_EXTERNAL_PORT:-1234}:${NODE_INTERNAL_PORT:-3000}"
+    volumes:
+      - .:/project
+    tty: true
